@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Titan Detailing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo-link">
+        <img src="logo.png" alt="Titan Detailing Logo" class="logo" />
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>About Titan Detailing</h2>
+      <p>
+        Founded in 2026 by <strong>Jamarion Ferguson</strong> and <strong>Kameron Terrazas</strong>, Titan Detailing is dedicated to providing luxury, high-tech car detailing services at an affordable price.
+      </p>
+      <p>
+        Our mission is to make every car look and feel brand new, whether it's a quick wash or a full ceramic coating. With precision and care, we treat every vehicle like it’s our own.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Titan Detailing. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('section');
+    const revealSection = () => {
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top + scrollY;
+        if(scrollY + windowHeight * 0.85 > sectionTop){
+          section.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealSection);
+    window.addEventListener('load', revealSection);
+  </script>
+</body>
+</html>
