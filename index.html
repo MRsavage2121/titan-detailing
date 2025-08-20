@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Titan Detailing - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="overlay">
+      <nav class="navbar">
+        <a href="index.html" class="logo-link">
+          <img src="logo.png" alt="Titan Detailing Logo" class="logo" />
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </nav>
+
+      <div class="hero-text">
+        <h1 class="title">Titan Detailing</h1>
+        <p class="tagline">Luxury • Precision • Perfection</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Professional Auto Detailing Services</h2>
+      <p>
+        At <strong>Titan Detailing</strong>, we bring a high-tech and luxury touch to every vehicle. 
+        From ceramic coatings to interior deep cleaning, our team ensures your car looks and feels brand new.
+      </p>
+      <a href="pricing.html" class="btn">View Packages</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Titan Detailing. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('section');
+    const revealSection = () => {
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top + scrollY;
+        if(scrollY + windowHeight * 0.85 > sectionTop){
+          section.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealSection);
+    window.addEventListener('load', revealSection);
+  </script>
+</body>
+</html>
