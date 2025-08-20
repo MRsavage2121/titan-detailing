@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing - Titan Detailing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="logo-link">
+        <img src="logo.png" alt="Titan Detailing Logo" class="logo" />
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Pricing Packages</h2>
+      <div class="pricing-table">
+        <div class="pricing-card">
+          <h3>Basic Wash</h3>
+          <p>$50</p>
+          <p>Exterior wash & dry</p>
+          <p>Interior vacuum</p>
+        </div>
+        <div class="pricing-card">
+          <h3>Premium Detail</h3>
+          <p>$120</p>
+          <p>Full exterior polish</p>
+          <p>Interior deep clean</p>
+        </div>
+        <div class="pricing-card">
+          <h3>Ultimate Ceramic</h3>
+          <p>$250</p>
+          <p>Ceramic coating</p>
+          <p>Full interior & exterior detailing</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Titan Detailing. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('section');
+    const revealSection = () => {
+      const scrollY = window.scrollY;
+      const windowHeight = window.innerHeight;
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top + scrollY;
+        if(scrollY + windowHeight * 0.85 > sectionTop){
+          section.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealSection);
+    window.addEventListener('load', revealSection);
+  </script>
+</body>
+</html>
