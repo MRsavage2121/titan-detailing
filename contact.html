@@ -24,7 +24,11 @@
   <main>
     <section>
       <h2>Contact Us</h2>
-      <form class="contact-form" action="mailto:youremail@example.com" method="post" enctype="text/plain">
+
+      <p>Email: <a href="mailto:titandetailing2122@gmail.com">titandetailing2122@gmail.com</a></p>
+      <p>Phone: <a href="tel:+15024287961">502-428-7961</a></p>
+
+      <form class="contact-form" action="mailto:titandetailing2122@gmail.com" method="post" enctype="text/plain">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required>
 
@@ -50,4 +54,14 @@
       const windowHeight = window.innerHeight;
       sections.forEach(section => {
         const sectionTop = section.getBoundingClientRect().top + scrollY;
-        if(scrollY + windowHeight * 0.85 >
+        if(scrollY + windowHeight * 0.85 > sectionTop){
+          section.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealSection);
+    window.addEventListener('load', revealSection);
+  </script>
+</body>
+</html>
+
